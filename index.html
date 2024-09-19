@@ -1,0 +1,173 @@
+<!DOCTYPE html>  
+<html lang="es">  
+
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="./CSS/styles.css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>  
+    <script src="https://cdn.tailwindcss.com"></script>  
+    <title>El Negocio</title>  
+</head>  
+
+<body class="bg-gray-100">  
+
+    <header class="bg-light-pink-300 p-4 text-center">  
+        <h1 class="text-3xl font-bold">Bienvenido a Blp Indumentaria</h1>  
+        <h2 class="text-xl">Nos ajustamos a tu comodidad</h2>  
+        <button id="toggle-cart" class="mt-2 bg-light-pink-500 hover:bg-light-pink-700 text-white p-2 rounded">Ver Carrito</button>  
+    </header>  
+    
+    <div class="container mx-auto p-4">  
+
+        <h2 class="text-2xl font-semibold mb-4">Nuestros Productos</h2>  
+
+        <h3 class="text-xl font-semibold">Calzados</h3>  
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">  
+
+            <div class="product border rounded-lg p-4 bg-white shadow">  
+                <img src="./ASSETS/img/zapas.jpg" alt="zapatillas nike" class="w-full h-auto rounded-t-lg">  
+                <h3 class="text-lg font-semibold">Zapatillas Nike</h3>  
+                <p>Zapatillas deportivas Nike, ideales para el entrenamiento.</p>  
+                <p class="font-bold">Precio: $12000.00</p>  
+                <button onclick="addToCart('Zapatillas Nike', 12000)" class="bg-light-pink-500 hover:bg-light-pink-700 text-white py-2 px-4 rounded">Añadir al carrito</button>  
+            </div>  
+
+            <div class="product border rounded-lg p-4 bg-white shadow">  
+                <img src="./ASSETS/img/zapasazules.webp" alt="zapatillas azules" class="w-full h-auto rounded-t-lg">  
+                <h3 class="text-lg font-semibold">Zapatillas azules</h3>  
+                <p>Zapatillas deportivas cómodas, ideales para el día a día.</p>  
+                <p class="font-bold">Precio: $9000.00</p>  
+                <button onclick="addToCart('Zapatillas azules', 9000)" class="bg-light-pink-500 hover:bg-light-pink-700 text-white py-2 px-4 rounded">Añadir al carrito</button>  
+            </div>  
+
+            <div class="product border rounded-lg p-4 bg-white shadow">  
+                <img src="./ASSETS/img/botasnegras.jpg" alt="botas negras" class="w-full h-auto rounded-t-lg">  
+                <h3 class="text-lg font-semibold">Botas negras</h3>  
+                <p>Botas de cuero elegantes, perfectas para el invierno.</p>  
+                <p class="font-bold">Precio: $15000.00</p>  
+                <button onclick="addToCart('Botas negras', 15000)" class="bg-light-pink-500 hover:bg-light-pink-700 text-white py-2 px-4 rounded">Añadir al carrito</button>  
+            </div>  
+
+            <div class="product border rounded-lg p-4 bg-white shadow">  
+                <img src="./ASSETS/img/zapascorrer.webp" alt="zapatillas deportivas" class="w-full h-auto rounded-t-lg">  
+                <h3 class="text-lg font-semibold">Zapatillas deportivas</h3>  
+                <p>Zapatillas ligeras y transpirables, ideales para correr.</p>  
+                <p class="font-bold">Precio: $12000.00</p>  
+                <button onclick="addToCart('Zapatillas deportivas', 12000)" class="bg-light-pink-500 hover:bg-light-pink-700 text-white py-2 px-4 rounded">Añadir al carrito</button>  
+            </div>  
+
+            <div class="product border rounded-lg p-4 bg-white shadow">  
+                <img src="./ASSETS/img/zapasverano.avif" alt="zapatillas de tela" class="w-full h-auto rounded-t-lg">  
+                <h3 class="text-lg font-semibold">Zapatillas de tela</h3>  
+                <p>Zapatillas cómodas de tela, perfectas para el verano.</p>  
+                <p class="font-bold">Precio: $8000.00</p>  
+                <button onclick="addToCart('Zapatillas de tela', 8000)" class="bg-light-pink-500 hover:bg-light-pink-700 text-white py-2 px-4 rounded">Añadir al carrito</button>  
+            </div>  
+
+            <div class="product border rounded-lg p-4 bg-white shadow">  
+                <img src="./ASSETS/img/vans-clasicas.webp" alt="zapatillas casual" class="w-full h-auto rounded-t-lg">  
+                <h3 class="text-lg font-semibold">Zapatillas casual</h3>  
+                <p>Zapatillas de estilo casual, ideales para salir.</p>  
+                <p class="font-bold">Precio: $9500.00</p>  
+                <button onclick="addToCart('Zapatillas casual', 9500)" class="bg-light-pink-500 hover:bg-light-pink-700 text-white py-2 px-4 rounded">Añadir al carrito</button>  
+            </div>  
+
+            <div class="product border rounded-lg p-4 bg-white shadow">  
+                <img src="./ASSETS/img/borcegos.webp" alt="botas de cuero" class="w-full h-auto rounded-t-lg">  
+                <h3 class="text-lg font-semibold">Botas de cuero</h3>  
+                <p>Botas de cuero resistentes, perfectas para el clima frío.</p>  
+                <p class="font-bold">Precio: $18000.00</p>  
+                <button onclick="addToCart('Botas de cuero', 18000)" class="bg-light-pink-500 hover:bg-light-pink-700 text-white py-2 px-4 rounded">Añadir al carrito</button>  
+            </div>  
+
+        </div>  
+
+        <h3 class="text-xl font-semibold">Ropa</h3>  
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">  
+
+            <div class="product border rounded-lg p-4 bg-white shadow">  
+                <img src="./ASSETS/img/buzo rojo.webp" alt="buzo rojo" class="w-full h-auto rounded-t-lg">  
+                <h3 class="text-lg font-semibold">Buzo rojo</h3>  
+                <p>Buzo de algodón rojo, perfecto para el clima fresco.</p>  
+                <p class="font-bold">Precio: $9000.00</p>  
+                <button onclick="addToCart('Buzo rojo', 9000)" class="bg-light-pink-500 hover:bg-light-pink-700 text-white py-2 px-4 rounded">Añadir al carrito</button>  
+            </div>  
+
+            <div class="product border rounded-lg p-4 bg-white shadow">  
+                <img src="./ASSETS/img/lompa.jpeg" alt="pantalón beige" class="w-full h-auto rounded-t-lg">  
+                <h3 class="text-lg font-semibold">Pantalón beige</h3>  
+                <p>Pantalón beige de gabardina, cómodo y versátil.</p>  
+                <p class="font-bold">Precio: $10000.00</p>  
+                <button onclick="addToCart('Pantalón beige', 10000)" class="bg-light-pink-500 hover:bg-light-pink-700 text-white py-2 px-4 rounded">Añadir al carrito</button>  
+            </div>  
+
+            <div class="product border rounded-lg p-4 bg-white shadow">  
+                <img src="./ASSETS/img/camiceta.webp" alt="Camiseta" class="w-full h-auto rounded-t-lg">  
+                <h3 class="text-lg font-semibold">Camiseta</h3>  
+                <p>Camiseta de algodón suave, ideal para el verano.</p>  
+                <p class="font-bold">Precio: $5000.00</p>  
+                <button onclick="addToCart('Camiseta rosa', 5000)" class="bg-light-pink-500 hover:bg-light-pink-700 text-white py-2 px-4 rounded">Añadir al carrito</button>  
+            </div>  
+
+            <div class="product border rounded-lg p-4 bg-white shadow">  
+                <img src="./ASSETS/img/jean.webp" alt="pantalón jeans" class="w-full h-auto rounded-t-lg">  
+                <h3 class="text-lg font-semibold">Pantalón jeans</h3>  
+                <p>Pantalón de mezclilla clásico, cómodo y duradero.</p>  
+                <p class="font-bold">Precio: $10000.00</p>  
+                <button onclick="addToCart('Pantalón jeans', 10000)" class="bg-light-pink-500 hover:bg-light-pink-700 text-white py-2 px-4 rounded">Añadir al carrito</button>  
+            </div>  
+
+            <div class="product border rounded-lg p-4 bg-white shadow">  
+                <img src="./ASSETS/img/camperafina.webp" alt="campera lila" class="w-full h-auto rounded-t-lg">  
+                <h3 class="text-lg font-semibold">Campera lila</h3>  
+                <p>Campera ligera de color lila, perfecta para la primavera.</p>  
+                <p class="font-bold">Precio: $12000.00</p>  
+                <button onclick="addToCart('Chaqueta lila', 12000)" class="bg-light-pink-500 hover:bg-light-pink-700 text-white py-2 px-4 rounded">Añadir al carrito</button>  
+            </div>  
+
+            <div class="product border rounded-lg p-4 bg-white shadow">  
+                <img src="./ASSETS/img/shortalgodon.webp" alt="shorts de algodón" class="w-full h-auto rounded-t-lg">  
+                <h3 class="text-lg font-semibold">Shorts de algodón</h3>  
+                <p>Shorts cómodos de algodón, ideales para el verano.</p>  
+                <p class="font-bold">Precio: $6000.00</p>  
+                <button onclick="addToCart('Shorts rosa', 6000)" class="bg-light-pink-500 hover:bg-light-pink-700 text-white py-2 px-4 rounded">Añadir al carrito</button>  
+            </div>  
+
+            <div class="product border rounded-lg p-4 bg-white shadow">  
+                <img src="./ASSETS/img/buzoazul.webp" alt="Campera fina azul" class="w-full h-auto rounded-t-lg">  
+                <h3 class="text-lg font-semibold">Campera fina azul</h3>  
+                <p>Campera fina de algodón suave, perfecta para el clima fresco.</p>  
+                <p class="font-bold">Precio: $9000.00</p>  
+                <button onclick="addToCart('Sudadera azul', 9000)" class="bg-light-pink-500 hover:bg-light-pink-700 text-white py-2 px-4 rounded">Añadir al carrito</button>  
+            </div>  
+
+            <div class="product border rounded-lg p-4 bg-white shadow">  
+                <img src="./ASSETS/img/vestidoflorar.webp" alt="vestido floral" class="w-full h-auto rounded-t-lg">  
+                <h3 class="text-lg font-semibold">Vestido floral</h3>  
+                <p>Vestido ligero con estampado floral, ideal para el verano.</p>  
+                <p class="font-bold">Precio: $11000.00</p>  
+                <button onclick="addToCart('Vestido floral', 11000)" class="bg-light-pink-500 hover:bg-light-pink-700 text-white py-2 px-4 rounded">Añadir al carrito</button>  
+            </div>  
+
+        </div>  
+    </div>  
+
+    <div id="cart" class="cart-modal hidden fixed top-0 right-0 w-80 bg-white shadow-lg p-4 h-full overflow-y-auto">  
+        <h2 class="text-xl font-semibold">Carrito de Compras</h2>  
+        <ul id="cart-items" class="list-disc pl-5"></ul>  
+        <p id="total" class="font-bold">Total: $0.00</p>  
+        <button id="clear-cart" class="bg-red-500 hover:bg-red-700 text-white p-2 rounded">Vaciar Carrito</button>  
+        <button id="pay-button" class="bg-light-pink-500 hover:bg-light-pink-700 text-white p-2 rounded">Pagar</button>  
+        <button id="close-cart" class="bg-light-pink-500 hover:bg-light-pink-700 text-white p-2 rounded">Cerrar</button>  
+    </div>  
+
+    <footer class="bg-light-pink-300 p-4 text-center">  
+        <p>&copy; 2023 Mi Tienda. Todos los derechos reservados.</p>  
+    </footer>  
+
+    <script src="./js/app.js"></script>  
+</body>  
+
+</html>
